@@ -1,8 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Nhom_02.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<Nhom2Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Nhom2")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
