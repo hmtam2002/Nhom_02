@@ -5,12 +5,25 @@ namespace Nhom_02.Models
 {
     public class Cart
     {
-        [Key]
-        public int ProductId { get; set; }
+        public int Id { get; set; }
+
         [DisplayName("Mã Tài Khoản")]
-        [Key]
         public int AccountId { get; set; }
-        [DisplayName("Số lượng")]
-        public int Quantity { get; set; }
+        // Navigation reference property cho khóa ngoại đến Account
+        [DisplayName("Khách hàng")]
+        public Account Account { get; set; }
+
+
+
+        public int ProductId { get; set; }
+        // Navigation reference property cho khóa ngoại đến Product
+        [DisplayName("Sản phẩm")]
+        public Product Product { get; set; }
+
+
+
+        [Required(ErrorMessage = "{0} không được bỏ trống")]
+        [DefaultValue(1)]
+        public int Quantity { get; set; } = 1;
     }
 }

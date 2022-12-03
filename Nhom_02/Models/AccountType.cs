@@ -6,9 +6,17 @@ namespace Nhom_02.Models
     {
 
         public int Id { get; set; }
+
+
         [DisplayName("Loại Tài Khoản ")]
         public string Name { get; set; }
+
+
         [DisplayName("Trạng thái")]
-        public bool Status { get; set; }
+        public bool Status { get; set; } = true;
+
+
+        // Collection reference property cho khóa ngoại từ Account
+        public List<Account> Accounts { get;set; }
     }
 }
