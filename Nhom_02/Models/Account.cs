@@ -27,7 +27,7 @@ namespace Nhom_02.Models
 
         [DisplayName("Số điện thoại")]
         [RegularExpression(@"0\d{9}", ErrorMessage = "SĐT không hợp lệ")]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
 
         [DisplayName("Họ và tên")]

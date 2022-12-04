@@ -48,7 +48,7 @@ namespace Nhom02.Migrations
                     Username = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Phone = table.Column<int>(type: "int", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AccountTypeId = table.Column<int>(type: "int", nullable: false),
                     Avatar = table.Column<string>(type: "nvarchar(max)", nullable: true),
