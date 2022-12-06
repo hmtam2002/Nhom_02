@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="custom-select-box">
+                    @*<div class="custom-select-box">
                         <select id="basic"
                                 class="selectpicker show-tick form-control"
                                 data-placeholder="$ USD">
@@ -94,15 +94,15 @@
                             <option>$ USD</option>
                             <option>€ EUR</option>
                         </select>
-                    </div>
+                    </div>*@
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                        <p>Liên hệ: <a href="#"> 0878 100 084</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Our location</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Tài khoản</a></li>
+                            <li><a href="#">Vị trí cửa hàng</a></li>
+                            <li><a href="#">Liên hệ chúng tôi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -110,6 +110,7 @@
         </div>
     </div>
     <!-- End Main Top -->
+
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -137,15 +138,15 @@
                         data-in="fadeInDown"
                         data-out="fadeOutUp">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" asp-controller="Products" asp-action="Index">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Về chúng tôi</a>
                         </li>
-                        <li class="dropdown megamenu-fw">
+                        @*<li class="dropdown megamenu-fw">
                             <a href="#"
                                class="nav-link dropdown-toggle arrow"
-                               data-toggle="dropdown">Product</a>
+                               data-toggle="dropdown">Sản phẩm</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
@@ -202,11 +203,11 @@
                                     <!-- end row -->
                                 </li>
                             </ul>
-                        </li>
+                        </li>*@
                         <li class="dropdown">
                             <a href="#"
                                class="nav-link dropdown-toggle arrow"
-                               data-toggle="dropdown">SHOP</a>
+                               data-toggle="dropdown">Sản phẩm</a>
                             <ul class="dropdown-menu">
                                 <li><a href="cart.html">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
@@ -216,10 +217,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="service.html">Our Service</a>
+                            <a class="nav-link" href="service.html">Chính sách</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            <a class="nav-link" href="contact-us.html">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -278,6 +279,7 @@
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
+
     <!-- Start Top Search -->
     <div class="top-search">
         <div class="container">
@@ -310,7 +312,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="footer-widget">
-                <h4>About ThewayShop</h4>
+                <h4>Về ThewayShop</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -356,11 +358,11 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="footer-link">
-                <h4>Information</h4>
+                <h4>Thông tin</h4>
                 <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Customer Service</a></li>
-                  <li><a href="#">Our Sitemap</a></li>
+                  <li><a href="#">Về chúng tôi</a></li>
+                  <li><a href="#">Chính sách người dùng</a></li>
+                  <li><a href="#">Sơ đồ trang web</a></li>
                   <li><a href="#">Terms &amp; Conditions</a></li>
                   <li><a href="#">Privacy Policy</a></li>
                   <li><a href="#">Delivery Information</a></li>
@@ -369,26 +371,24 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="footer-link-contact">
-                <h4>Contact Us</h4>
+                <h4>Liên hệ chúng tôi</h4>
                 <ul>
                   <li>
                     <p>
-                      <i class="fas fa-map-marker-alt"></i>Address: Michael I.
-                      Days 3756 <br />Preston Street Wichita,<br />
-                      KS 67213
+                      <i class="fas fa-map-marker-alt"></i>Địa chỉ: 65 Huỳnh Thúc Kháng, phường Bến Nghé, quận 1, TP.HCMKS 67213
                     </p>
                   </li>
                   <li>
                     <p>
                       <i class="fas fa-phone-square"></i>Phone:
-                      <a href="tel:+1-888705770">+1-888 705 770</a>
+                      <a href="tel:+1-888705770">0878 100 084</a>
                     </p>
                   </li>
                   <li>
                     <p>
                       <i class="fas fa-envelope"></i>Email:
                       <a href="mailto:contactinfo@gmail.com"
-                        >contactinfo@gmail.com</a
+                        >DOAN_ASP.NET@nhom02.com</a
                       >
                     </p>
                   </li>
@@ -432,9 +432,9 @@
     <script src="js/custom.js"></script>
 
 
-@*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)*@
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
