@@ -19,8 +19,8 @@
     <meta name="author" content="" />
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="~/images/apple-touch-icon.png" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
@@ -104,9 +104,9 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#">Tài khoản</a></li>
-                            <li><a href="#">Vị trí cửa hàng</a></li>
-                            <li><a href="#">Liên hệ chúng tôi</a></li>
+                            <li><a asp-controller="Accounts" asp-action="">Tài khoản</a></li>
+                            <li><a asp-controller="Home" asp-action="Location">Vị trí cửa hàng</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact">Liên hệ chúng tôi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand"  asp-controller="Home" asp-action="Index">
-                        <img src="images/logo.png" class="logo" alt="" />
+                        <img src="~/images/logo.png" class="logo" alt="" />
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -142,10 +142,13 @@
                         data-in="fadeInDown"
                         data-out="fadeOutUp">
                         <li class="nav-item active">
-                            <a class="nav-link" asp-controller="Products" asp-action="Index">Trang chủ</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Về chúng tôi</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="About">Về chúng tôi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Products" asp-action="">Sản phẩm</a>
                         </li>
                         @*<li class="dropdown megamenu-fw">
                             <a href="#"
@@ -208,7 +211,7 @@
                                 </li>
                             </ul>
                         </li>*@
-                        <li class="dropdown">
+                        @*<li class="dropdown">
                             <a href="#"
                                class="nav-link dropdown-toggle arrow"
                                data-toggle="dropdown">Sản phẩm</a>
@@ -219,12 +222,12 @@
                                 <li><a href="wishlist.html">Wishlist</a></li>
                                 <li><a href="shop-detail.html">Shop Detail</a></li>
                             </ul>
+                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Service">Chính sách</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="service.html">Chính sách</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact-us.html">Liên hệ</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -232,11 +235,11 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search">
+                        @*<li class="search">
                             <a href="#"><i class="fa fa-search"></i></a>
-                        </li>
+                        </li>*@
                         <li class="side-menu">
-                            <a href="#">
+                            <a asp-controller="Carts" asp-action="Index">
                                 <i class="fa fa-shopping-bag"></i>
                                 <span class="badge">3</span>
                             </a>
@@ -248,7 +251,7 @@
             <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
+                <div class="cart-box">
                     <ul class="cart-list">
                         <li>
                             <a href="#" class="photo">
@@ -276,7 +279,7 @@
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>
-                </li>
+                </div>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -385,7 +388,7 @@
                   <li>
                     <p>
                       <i class="fas fa-phone-square"></i>Phone:
-                      <a href="tel:+1-888705770">0878 100 084</a>
+                      <a href="tel:0878100084">0878 100 084</a>
                     </p>
                   </li>
                   <li>
