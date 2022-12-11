@@ -19,6 +19,8 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\images\Accounts\" />
+    <Folder Include="wwwroot\images\Products\" />
   </ItemGroup>
 
   <ItemGroup>
