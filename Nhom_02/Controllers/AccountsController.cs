@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Nhom_02.Data;
 using Nhom_02.Models;
+using NuGet.Protocol.Plugins;
 
 namespace Nhom_02.Controllers
 {
@@ -25,6 +26,32 @@ namespace Nhom_02.Controllers
             var nhom2Context = _context.Accounts.Include(a => a.AccountType);
             return View(await nhom2Context.ToListAsync());
         }
+
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(Account acc)
+        {
+            if (ModelState.IsValid)
+            {
+                var User = from u in _context.Accounts select u;
+                User = User.Where(s => s.Username.Contains(acc.Username));
+                if (User.Count() != 0)
+                {
+                    if (User.First().Password == acc.Password)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+            }
+            ViewBag.loi="dang nhap that bai";
+            return View();
+
+        }
+
 
         // GET: Accounts/Details/5
         public async Task<IActionResult> Details(int? id)
