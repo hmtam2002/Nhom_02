@@ -75,7 +75,7 @@ namespace Nhom_02.Controllers
         // GET: Accounts/Create
         public IActionResult Create()
         {
-            ViewData["AccountTypeId"] = new SelectList(_context.AccountTypes, "Id", "Id");
+            ViewData["AccountType"] = new SelectList(_context.AccountTypes, "Name", "Name");
             return View();
         }
 
